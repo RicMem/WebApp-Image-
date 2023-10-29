@@ -15,6 +15,8 @@ namespace MyWebApplication.Models.DB
 
         public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<SystemUsers> SystemUsers { get; set; }
+        public virtual DbSet<UserRole> UserRole { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -91,6 +93,85 @@ namespace MyWebApplication.Models.DB
                 .HasColumnName("LoginName")
                 .HasMaxLength(50)
                 .IsUnicode(false);
+
+                entity.Property(e => e.CreatedBy)
+                  .HasColumnName("RowCreatedSYSUserID")
+                  .HasColumnType("int");
+
+                entity.Property(e => e.CreatedDateTime)
+                  .HasColumnName("RowCreatedDateTime")
+                  .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                entity.Property(e => e.ModifiedBy)
+                  .HasColumnName("RowModifiedSYSUserID")
+                  .HasColumnType("int");
+
+                entity.Property(e => e.ModifiedDateTime)
+                  .HasColumnName("RowModifiedDateTime")
+                  .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            });
+
+
+            modelBuilder.Entity<UserRole>(entity =>
+            {
+                entity.ToTable("SYSUserRole");
+
+                entity.HasKey(e => new { e.RoleID });
+
+                entity.Property(e => e.RoleID)
+                .HasColumnName("SYSUserRoleID")
+                .HasColumnType("int");
+
+                entity.Property(e => e.UserID)
+                .HasColumnName("SYSUserID")
+                .HasColumnType("int");
+
+                entity.Property(e => e.LookUpRoleID)
+                .HasColumnName("LOOKUpRoleID")
+                .HasColumnType("int");
+
+                entity.Property(e => e.IsActive)
+                .HasColumnName("IsActive")
+                .HasColumnType("bit");
+
+                entity.Property(e => e.CreatedBy)
+                  .HasColumnName("RowCreatedSYSUserID")
+                  .HasColumnType("int");
+
+                entity.Property(e => e.CreatedDateTime)
+                  .HasColumnName("RowCreatedDateTime")
+                  .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                entity.Property(e => e.ModifiedBy)
+                  .HasColumnName("RowModifiedSYSUserID")
+                  .HasColumnType("int");
+
+                entity.Property(e => e.ModifiedDateTime)
+                  .HasColumnName("RowModifiedDateTime")
+                  .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            });
+
+            modelBuilder.Entity<Role>(entity =>
+            {
+                entity.ToTable("LOOKUPRole");
+
+
+                entity.Property(e => e.RoleID)
+                .HasColumnName("LOOKUPRoleID")
+                .HasColumnType("int");
+
+                entity.Property(e => e.RoleName)
+                .HasColumnName("RoleName")
+                .HasMaxLength(100)
+                .IsUnicode(false);
+
+                entity.Property(e => e.RoleDescription)
+                .HasColumnName("RoleDescription")
+                .HasMaxLength(500)
+                .IsUnicode(false);
+
 
                 entity.Property(e => e.CreatedBy)
                   .HasColumnName("RowCreatedSYSUserID")

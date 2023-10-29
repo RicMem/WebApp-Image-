@@ -1,6 +1,9 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using MyWebApplication.Models.EntityManager;
 using MyWebApplication.Models.ViewModel;
+using MyWebApplication.Security;
+using System.Security.Claims;
 
 namespace MyWebApplication.Controllers
 {
@@ -11,6 +14,13 @@ namespace MyWebApplication.Controllers
             return View();
         }
 
+        //public SignInManager<string> _signInManager;
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [AuthorizeRoles("Admin")]
         public ActionResult Users()
         {
             UserManager um = new UserManager();
@@ -23,6 +33,7 @@ namespace MyWebApplication.Controllers
         public ActionResult SignUp(UserModel user)
         {
             ModelState.Remove("AccountImage");
+            ModelState.Remove("RoleName");
 
             if (ModelState.IsValid)
             {
@@ -31,7 +42,7 @@ namespace MyWebApplication.Controllers
                 {
                     um.AddUserAccount(user);
                     // FormsAuthentication.SetAuthCookie(user.FirstName, false);
-                    return RedirectToAction("", "Page");
+                    return RedirectToAction("", "Home");
                 }
                 else
                     ModelState.AddModelError("", "Login Name already taken.");
@@ -39,25 +50,65 @@ namespace MyWebApplication.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ActionResult GetUsers()
-        {
-            var users = new UserManager().GetAllUsers();
-
-            return View();
-        }
-
         [HttpPut]
-        public Task<ActionResult> Update([FromBody] UserModel userData)
+        public async Task<ActionResult> Update([FromBody] UserModel userData)
         {
             UserManager um = new UserManager();
             if (um.IsLoginNameExist(userData.LoginName))
             {
                 um.UpdateUserAccount(userData);
-                return Task.FromResult<ActionResult>(RedirectToAction("Index")); // Redirect to a relevant action after successful update.
+                return RedirectToAction("Index"); // Redirect to a relevant action after successful update.
             }
             // Handle the case when the login name doesn't exist, e.g., return a relevant error view.
-            return Task.FromResult<ActionResult>(RedirectToAction("LoginNameNotFound"));
+            return RedirectToAction("LoginNameNotFound");
+        }
+
+        [HttpPost]
+        public ActionResult LogIn(UserLoginModel ulm)
+        {
+            if (ModelState.IsValid)
+            {
+                UserManager um = new UserManager();
+
+                if (string.IsNullOrEmpty(ulm.Password))
+                {
+                    ModelState.AddModelError(
+                        "",
+                        "The user login or password provided is incorrect."
+                    );
+                }
+                else
+                {
+                    if (um.GetUserPassword(ulm.LoginName).Equals(ulm.Password))
+                    {
+                        var claims = new List<Claim> { new Claim(ClaimTypes.Name, (string)ulm.LoginName) };
+
+                        var userIdentity = new ClaimsIdentity(claims, "login");
+
+                        ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+
+                        // Sign in the user using Cookie Authentication
+                        HttpContext.SignInAsync(principal);
+
+                        // Redirect to the desired action (e.g., "Users")
+                        return RedirectToAction("Index", "Page");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "The password provided is incorrect.");
+                    }
+                }
+            }
+
+            // If authentication fails or ModelState is invalid, redisplay the login form
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult LogOut()
+        {
+            HttpContext.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

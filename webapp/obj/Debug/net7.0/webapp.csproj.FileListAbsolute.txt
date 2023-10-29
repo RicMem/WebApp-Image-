@@ -223,6 +223,10 @@ C:\Users\rmema\source\repos\Emergency\webapp\obj\Debug\net7.0\refint\webapp.dll
 C:\Users\rmema\source\repos\Emergency\webapp\obj\Debug\net7.0\webapp.pdb
 C:\Users\rmema\source\repos\Emergency\webapp\obj\Debug\net7.0\webapp.genruntimeconfig.cache
 C:\Users\rmema\source\repos\Emergency\webapp\obj\Debug\net7.0\ref\webapp.dll
+C:\Users\rmema\source\repos\WebApplication1\webapp\bin\Debug\net7.0\Microsoft.Owin.dll
+C:\Users\rmema\source\repos\WebApplication1\webapp\bin\Debug\net7.0\Microsoft.Owin.Security.dll
+C:\Users\rmema\source\repos\WebApplication1\webapp\bin\Debug\net7.0\Microsoft.Owin.Security.Cookies.dll
+C:\Users\rmema\source\repos\WebApplication1\webapp\bin\Debug\net7.0\Owin.dll
 C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\appsettings.json
 C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\webapp.staticwebassets.runtime.json
@@ -250,9 +254,13 @@ C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\Microsoft.Iden
 C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\Microsoft.Owin.dll
+C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\Microsoft.Owin.Security.dll
+C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\Microsoft.Owin.Security.Cookies.dll
 C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
 C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\Owin.dll
 C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\System.CodeDom.dll
 C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
 C:\Users\rmema\source\repos\WebApp-Image-\webapp\bin\Debug\net7.0\System.Drawing.Common.dll
