@@ -1,193 +1,109 @@
-﻿@{
-    ViewBag.Title = "Home";
-}
-<!DOCTYPE html>
+﻿<div class="container">
+    <div class="main-body">
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
+                <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+            </ol>
+        </nav>
+        <!-- /Breadcrumb -->
+
+        <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t1.18169-9/11536146_10203814889966521_5097082372723133062_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=908e45&_nc_eui2=AeGdviZqUxEeCxYsMV3IzZT9VIwXpaYe0tBUjBelph7S0KP6thWkZl06tUoK6A7gyUDaTplC_8gEM1PlfOqbFH1U&_nc_ohc=c6Z9DbFhUzQAX-kB2pT&_nc_ht=scontent.fmnl30-3.fna&oh=00_AfCfZXgGFH7t7EYut_VNUxfNy6aJsTNqmua4qhdKtllhjw&oe=656D4318" alt="No photo description available." class="rounded-circle" width="150">
+                            <div class="mt-3">
+                                <h4>Ricardo Carlos B. Memarion</h4>
+                                <p class="text-secondary mb-1">Student at APC</p>
+                                <p class="text-muted font-size-sm">Metro Manila</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Website</h6>
+                            <span class="text-secondary">https://webiste.com</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2 icon-inline"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</h6>
+                            <span class="text-secondary">https://Github.com</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter mr-2 icon-inline text-info"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>Twitter</h6>
+                            <span class="text-secondary">https://Twitter.com</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram mr-2 icon-inline text-danger"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>Instagram</h6>
+                            <span class="text-secondary">https://Instagram.com</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook mr-2 icon-inline text-primary"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</h6>
+                            <span class="text-secondary">https://Facebook.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Full Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                Ricardo Carlos B. Memarion
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Email</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                rbmemarion@student.apc.edu.ph
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Phone</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                8629847 - 32942342
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Mobile</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                777-77770
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Address</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                Metro Manila
+                            </div>
+                        </div>
+                        
 
 
 
-
-<html>
-<head>
-    <title>W3.CSS Template</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-</head>
-<body>
-
- 
-    <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
-        <h1 class="w3-xxxlarge w3-text-theme">Side Menu</h1>
-        <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
-        <a href="Account/Users" class="w3-bar-item w3-button">User List</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
-        <a href="#" class="w3-bar-item w3-button">Link 4</a>
-    </nav>
-
-   
-    <header class="w3-container w3-theme w3-padding" id="myHeader">
-        <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
-        <div class="w3-center">
-            <h4>Group 3M</h4>
-            <h1 class="w3-xxxlarge w3-animate-bottom">WEB APPLICATION</h1>
-            <div class="w3-padding-32">
-                <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">LETS GOOOO</button>
             </div>
         </div>
-    </header>
 
-    <div id="id01" class="w3-modal">
-        <div class="w3-modal-content w3-card-4 w3-animate-top">
-            <header class="w3-container w3-theme-l1">
-                <span onclick="document.getElementById('id01').style.display='none'"
-                      class="w3-button w3-display-topright">×</span>
-                <h4>Never gonna give you up</h4>
-                <h5>Never gonna let you down...<i class="fa fa-smile-o"></i></h5>
-            </header>
-            <div class="w3-padding">
-                <img src="https://media.tenor.com/x8v1oNUOmg4AAAAd/rickroll-roll.gif" alt="Rickroll GIFs | Tenor" width="500" height="500">
-                <p>Never gonna run around and desert you</p>
-                <p>Yes Go here <a class="w3-btn" href="/w3css/default.asp">W3.CSS Tutorial</a> Is Nice</p>
-            </div>
-            <footer class="w3-container w3-theme-l1">
-                <p>Modal footer</p>
-            </footer>
-        </div>
     </div>
-
-    <div class="w3-row-padding w3-center w3-margin-top">
-        <div class="w3-third">
-            <div class="w3-card w3-container" style="min-height:460px">
-                <h3>For Emergencies</h3><br>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_the_Red_Cross.png" alt="File:Flag of the Red Cross.png - Wikipedia" width="300" height="300">
-                <p>With the use of cloud-based database the staff can react to emergenies much more efficiently </p>
-                
-            </div>
-        </div>
-
-        <div class="w3-third">
-            <div class="w3-card w3-container" style="min-height:460px">
-                <h3>Call For Help!!!</h3><br>
-                <img src="https://i.gifer.com/Wc8C.gif" alt="Calls GIFs - Get the best gif on GIFER" width="300" height="300">
-                <p>Health center can now respond to call for help much more faster since ever info are all in a data base</p>
-                
-            </div>
-        </div>
-
-        <div class="w3-third">
-            <div class="w3-card w3-container" style="min-height:460px">
-                <h3>Consult your Doctor</h3><br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLGmFA7pMePZ_dCWZjPwMXLK2GsCpw9q2llA&usqp=CAU" alt="female doctor with stethoscope. girl doctor. isolated vector - Clip Art  Library" width="300" height="300">
-                <p>The Health center cloud-based database can help staff members manage records and consultatiion records from patients more easier</p>
-            </div>
-        </div>
-    </div>
-
-   
-        <hr>
-        <h2 class="w3-center">Contacts</h2>
-        <button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Head Manager</button>
-        <div id="Demo1" class="w3-hide">
-            <div class="w3-container">
-                <p>Email: Rich@gmail.com</p>
-                <p>Phone Number: 9799-99989</p>
-            </div>
-        </div>
-        <button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Assistant Manager</button>
-        <div id="Demo2" class="w3-hide">
-                <p>Email: Tom@gmail.com</p>
-                <p>Phone Number: 9775-78692</p>
-        </div>
-        <button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Doctor</button>
-        <div id="Demo3" class="w3-hide">
-            <div class="w3-container">
-            <p>Email: Alexah@gmail.com</p>
-            <p>Phone Number: 9229-962882</p>
-            </div>
-        </div>
-
-        
-   
-    <script>
-        // Side navigation
-        function w3_open() {
-          var x = document.getElementById("mySidebar");
-          x.style.width = "100%";
-          x.style.fontSize = "40px";
-          x.style.paddingTop = "10%";
-          x.style.display = "block";
-        }
-        function w3_close() {
-          document.getElementById("mySidebar").style.display = "none";
-        }
-
-        // Tabs
-        function openCity(evt, cityName) {
-          var i;
-          var x = document.getElementsByClassName("city");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          var activebtn = document.getElementsByClassName("testbtn");
-          for (i = 0; i < x.length; i++) {
-            activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
-          }
-          document.getElementById(cityName).style.display = "block";
-          evt.currentTarget.className += " w3-dark-grey";
-        }
-
-        var mybtn = document.getElementsByClassName("testbtn")[0];
-        mybtn.click();
-
-        // Accordions
-        function myAccFunc(id) {
-          var x = document.getElementById(id);
-          if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-          } else {
-            x.className = x.className.replace(" w3-show", "");
-          }
-        }
-
-        // Slideshows
-        var slideIndex = 1;
-
-        function plusDivs(n) {
-          slideIndex = slideIndex + n;
-          showDivs(slideIndex);
-        }
-
-        function showDivs(n) {
-          var x = document.getElementsByClassName("mySlides");
-          if (n > x.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = x.length} ;
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          x[slideIndex-1].style.display = "block";
-        }
-
-        showDivs(1);
-
-        // Progress Bars
-        function move() {
-          var elem = document.getElementById("myBar");
-          var width = 5;
-          var id = setInterval(frame, 10);
-          function frame() {
-            if (width == 100) {
-              clearInterval(id);
-            } else {
-              width++;
-              elem.style.width = width + '%';
-              elem.innerHTML = width * 1  + '%';
-            }
-          }
-        }
-    </script>
-
-</body>
-</html>
+</div>
